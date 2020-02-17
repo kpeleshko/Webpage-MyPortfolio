@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    scroll-behavior: smooth;
+
+    @include respond(atSmall) {
+        font-size: 56.25%; 
+    }
+
+    @include respond(atBig) {
+        font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+    }
+    
+    @include respond(atLarge) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    background-color: $color-white;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-grey-dark-1;
+}
+
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.margin-bt-md {margin-bottom: 3rem;}
+.margin-bt-bg {margin-bottom: 5rem;}
+.margin-r-sm {margin-right: 2rem;}

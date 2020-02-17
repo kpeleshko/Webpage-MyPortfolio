@@ -1,0 +1,30 @@
+// COLORS
+$color-primary: #BA265D;
+$color-primary-light: #FF3366;
+$color-primary-dark: #BA265D;
+
+$color-secondary: #b88b8b;
+$color-secondary-light: rgb(255, 248, 249);
+$color-secondary-dark: pink;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #ddd;
+$color-grey-light-4: #ccc;
+
+$color-grey-dark-1: #222;
+$color-grey-dark-2: #555;
+$color-grey-dark-3: #999;
+
+
+$color-white: #fff;
+$color-black: #000;
+
+
+$shadow-pink: 0 0 3rem .5rem rgba($color-secondary, .7);
+$shadow-pink-light: 0 0 4rem .5rem rgba($color-secondary, .5);
+$shadow-pink-inset: inset 0 0 5rem .5rem rgba($color-secondary, .4);
+
+$shadow-grey: 0 0 4rem .5rem rgba(0,0,0,.2);
+$shadow-grey-light: 0 0 10px 0 rgba($color-black, 0.75);
+

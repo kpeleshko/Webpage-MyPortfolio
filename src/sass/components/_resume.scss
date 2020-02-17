@@ -1,0 +1,64 @@
+.resume {
+    width: 100%;
+    min-height: 10rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: $color-secondary;
+    transition: background-color 0.5s linear;
+    
+    &:hover {
+        background-color: $color-primary;
+        transition: all 0.3s ease;
+    }
+
+    &:hover &__title {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3D(0, 4rem, 0) scale(0.25);
+    }
+    
+    &:hover &__text {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3D(0, 4rem, 0) scale(1);
+    }
+
+    &__link {
+        font-size: 1.6rem;
+        font-family: 'Raleway', 'Arial', sans-serif;
+        letter-spacing: .5rem;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin: 4rem auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+        visibility: visible;
+        opacity: 1;
+        text-align: center;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.425, -0.195, 0.005, 1.215), opacity 0.13333s linear;
+
+    }
+    
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.4s cubic-bezier(0.425, -0.195, 0.005, 1.215), opacity 0.4s linear;
+    }
+
+    
+
+   
+}

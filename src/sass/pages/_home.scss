@@ -1,0 +1,126 @@
+.bio {
+
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    background-color: $color-secondary;
+
+    @include respond(atMedium) {
+        border-top: 1rem solid $color-secondary;
+        padding-top: 10rem;
+    }
+
+    
+}
+
+.skills {
+    padding: 6rem 0;
+    background-color: $color-white;
+    @include flexCenter;
+    flex-direction: column;
+
+    @include respond(atSmall) {
+        padding: 10rem 0;
+        box-shadow: $shadow-pink-inset;
+    } 
+}
+
+.portfolio {
+    padding: 6rem 0;
+    background-color: $color-grey-dark-1;
+
+    @include respond(atSmall) {
+        padding: 10rem 0;
+    } 
+}
+
+
+
+
+
+
+
+
+.port-item {
+
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 3rem;
+            height: .1rem;
+            width: 100%;
+            background-color: $color-primary;  
+            box-shadow: $shadow-grey-light;
+        }
+    }
+
+    &__img-wrapper {
+        margin-right: -4%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__img {
+        position: relative;
+        box-shadow: $shadow-grey-light;
+        border-radius: .2rem; 
+
+        &--desk {
+            left: 0;
+            width: 55%;
+        }
+    
+        &--port {
+            right: 2%;
+            width: 35%;
+            max-height: 90%;
+        }
+    
+        &--phone {
+           right: 4%;
+            width: 16%;
+        }
+    }
+
+    &__info {
+        margin-top: 4rem;
+
+        @include respond(atMedium) {
+            display: flex;
+        } 
+    }
+
+    &__skill {
+        display: inline-block;
+        margin-right: 1rem;
+        padding: .6rem 1.2rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        text-transform: uppercase;
+        color: $color-grey-dark-3;
+        background-color: rgba($color-grey-dark-2, .6);
+        border-radius: .2rem;
+    }
+
+    &__text {
+        margin-top: 3rem;
+        // width: 100%;
+        color: $color-grey-light-2;
+
+        @include respond(atMedium) {
+            width: 90%;
+        } 
+    }
+
+    &__btn {
+        margin-top: 3rem;
+        align-self: flex-end;
+        display: flex;
+
+        @include respond(atMedium) {
+            margin-top: 0rem;
+        } 
+    }
+}

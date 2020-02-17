@@ -1,0 +1,60 @@
+.about {
+
+    margin-top: 4rem;
+
+    @include respond(atSmall) {
+        margin-top: 0;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    &__wrapper { position: relative; }
+
+    &__bg {
+        display: none;
+
+        @include respond(atSmall) {
+            display: block;
+            // transform: rotate(90deg);
+            min-height: 50rem;
+            max-height: 100vh;
+            
+        }
+    }
+
+    &--margin {
+        display: inline-block;
+        margin-left: 3rem;
+        @include respond(atSmall) {
+            margin-left: 6rem;
+        }
+    }
+
+    &--bold {
+        font-family: 'Muli';
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 4rem;
+        letter-spacing: .15rem;
+        color: $color-grey-dark-2;
+        @include respond(atSmall) {
+            color: $color-white;
+        }
+    }
+
+    &--main-color {
+        color: $color-primary;
+        font-size: 2.5rem;
+        @include respond(atSmall) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &--secondary-color {
+        color: $color-grey-dark-1;
+        @include respond(atSmall) {
+            color: $color-secondary;
+        }
+    }
+}

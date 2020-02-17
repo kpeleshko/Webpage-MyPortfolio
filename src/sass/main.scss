@@ -1,0 +1,20 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+
+@import "components/social";
+@import "components/button";
+@import "components/resume";
+@import "components/form";
+@import "components/about";
+@import "components/connect";
+
+
+@import "layout/header";
+
+@import "pages/home";
+

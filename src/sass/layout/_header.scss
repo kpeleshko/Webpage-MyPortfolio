@@ -1,0 +1,128 @@
+.hero {
+    background-color: $color-white;
+    box-shadow: none;
+
+    @include respond(atMedium) {
+        box-shadow: $shadow-pink-inset;
+        height: 100vh;
+    }
+    
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 2rem;
+        height: 100vh;
+    }
+
+    &__burger-content--closed {
+        display: none !important;
+    }
+
+    &__burger-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgba($color-white, .95);
+    }
+    
+
+    &__img-wrapper {
+        @include absCenter;
+        min-height: 33rem;
+        min-width: 33rem;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: $shadow-pink;
+
+        @include respond(atSmall) {
+            height: auto;
+            width: auto;
+            max-height: 75vh;
+            max-width: 75vh;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 50%;
+        border: 1px solid $color-grey-light-3;
+    }
+
+    &__navigation-link:visited,
+    &__navigation-link:link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        color: $color-grey-dark-1;
+        border: none;
+        transition: color .5s ease-out;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+      
+    //ICON
+    ////////////
+    &__burger-btn {
+        z-index: 2000;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        box-shadow: $shadow-pink-light;
+        text-align: center;
+        background-color: $color-white;
+        cursor: pointer;
+    }
+
+    &__burger-icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -.8rem; }
+        &::after { top: .8rem; }
+    }
+    
+    &__burger-icon--closed {
+        background-color: transparent;
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+}

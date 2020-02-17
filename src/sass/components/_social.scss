@@ -1,0 +1,18 @@
+.social-icon {
+    margin-left: .4rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: $color-grey-dark-2;
+    transition: fill .5s ease-out;
+    
+    &:hover {fill: $color-primary;}
+
+    &--animated {
+        margin: 0;
+        animation: infinit_up_down 1s infinite;
+    }
+
+    &--color-primary {
+        fill: $color-primary;
+    }
+}
