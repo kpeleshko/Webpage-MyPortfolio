@@ -22,6 +22,7 @@
 
     &__burger-content {
         position: absolute;
+        padding: 2rem 0;
         top: 0;
         left: 0;
         z-index: 100;
@@ -89,6 +90,7 @@
         cursor: pointer;
     }
 
+
     &__burger-icon {
         position: relative;
         margin-top: 3.5rem;
@@ -113,6 +115,7 @@
         &::before { top: -.8rem; }
         &::after { top: .8rem; }
     }
+
     
     &__burger-icon--closed {
         background-color: transparent;
