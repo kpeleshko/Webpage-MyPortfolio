@@ -1,12 +1,17 @@
 .about {
 
     margin-top: 4rem;
+    margin-left: 2rem;
 
-    @include respond(atSmall) {
+    @include respond(atMedium) {
         margin-top: 0;
         position: absolute;
-        top: 15%;
-        left: 15%;
+        top: 17%;
+        left: 11.5%;
+    }
+
+    @include respond(atLarge) {
+        left: 11%;
     }
 
     &__wrapper { position: relative; }
@@ -14,12 +19,11 @@
     &__bg {
         display: none;
 
-        @include respond(atSmall) {
+        @include respond(atMedium) {
             display: block;
-            // transform: rotate(90deg);
-            min-height: 50rem;
-            max-height: 100vh;
-            
+            transform: rotate(90deg) translateY(-5rem);
+            height: 70rem;
+            width: 75rem;
         }
     }
 
@@ -37,23 +41,24 @@
         font-size: 2rem;
         line-height: 4rem;
         letter-spacing: .15rem;
-        color: $color-grey-dark-2;
-        @include respond(atSmall) {
+        color: $color-grey-dark-1;
+        @include respond(atMedium) {
             color: $color-white;
         }
     }
 
     &--main-color {
-        color: $color-primary;
+        color: $color-primary-light;
         font-size: 2.5rem;
         @include respond(atSmall) {
             font-size: 3.5rem;
+            color: $color-primary;
         }
     }
 
     &--secondary-color {
-        color: $color-grey-dark-1;
-        @include respond(atSmall) {
+        color: $color-grey-light-1;
+        @include respond(atMedium) {
             color: $color-secondary;
         }
     }

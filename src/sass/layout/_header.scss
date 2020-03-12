@@ -33,6 +33,8 @@
         flex-direction: column;
         justify-content: space-around;
         background-color: rgba($color-white, .95);
+        transform-origin: top right;
+        animation: scale .4s ease-out;
     }
     
 

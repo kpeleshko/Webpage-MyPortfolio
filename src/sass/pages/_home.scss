@@ -1,5 +1,8 @@
 .bio {
-
+    position: relative;
+    background-image: linear-gradient(to right, rgba($color-secondary, .7), rgba($color-secondary, .3)), url(../../img/notebook.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 6rem;
     padding-bottom: 10rem;
     background-color: $color-secondary;
@@ -8,7 +11,6 @@
         border-top: 1rem solid $color-secondary;
         padding-top: 10rem;
     }
-
     
 }
 
